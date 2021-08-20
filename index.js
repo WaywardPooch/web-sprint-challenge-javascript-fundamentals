@@ -1,6 +1,7 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
+
 Study the code below and explain in your own words why nested function can 
 access the variable internal. */
 
@@ -59,6 +60,7 @@ function summation(number) {
 console.log("Result of summation(4); (expected: 10) =>", summation(4));
 
 /* 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
+
 Given this zoo data from around the United States, follow the instructions 
 below. Use the specific array methods in the requests below to solve the 
 problems. */
@@ -127,6 +129,7 @@ const zooAnimals = [
 ];
 
 /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
+
 The zoos want to display both the scientific name and the animal name in front 
 of the habitats. Use animalNames to populate and return the displayNames array 
 with only the animal name and scientific name of each animal. displayNames 
@@ -152,14 +155,23 @@ function animalNames(animalsArray) {
 console.log("List of zoo animal display names:", animalNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
+
 The zoo needs a list of all their animal's names converted to lower case. Using 
 lowerCaseNames use .map() to create a new array of strings with the animal's 
 names in lowercase and return the new array.
 For example: ['jackal, asiatic', .....] */
 
-function lowerCaseNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+console.log("===============[TOPIC 2, REQUEST 2]===============");
+
+function lowerCaseNames(animalsArray) {
+  // Return a new array of animals from the animalsArray...
+  return animalsArray.map((animal) => {
+    // ...and keep only animal names, converted to lowercase
+    return animal.animal_name.toLowerCase();
+  });
 }
+// Check if the lowerCaseNames() function works
+console.log("List of lowercase animal names", lowerCaseNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
