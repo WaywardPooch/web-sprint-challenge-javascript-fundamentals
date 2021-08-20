@@ -1,4 +1,5 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
+
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
@@ -18,26 +19,43 @@ myFunction();
 /*🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 Nested function have access to the lexical scope of all their parent functions;
-in other words, variables of parent functions can be passed down to their
+in other words, variables of parent functions can be passed down into their
 children. If a nested function requires a variable, it will first look within
 its own scope, and if it cannot find that variable, it will go one level out,
 and look there for it, repeating this process until it either finds it, or ends
 up hitting the global level without finding it, where in strict mode, it will
 return an error, whereas without strict mode, it will create a new global 'var'
-to fill in for the role (which can create buggy code).
+to fill in for the role (which can create buggy code). The idea that on top of
+this, nested functions have access to the variables of their parents, even
+after parent functions close, is called closure.
 
 */
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
+
 /* Use summation to do the following:
     1. Receive a number 
     2. Use a counter to return the summation of that number. 
     
-For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
+For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you 
+may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+console.log("===============[TOPIC 1, TASK 2]===============");
+
+function summation(number) {
+  // Create a result counter
+  let summationResult = 0;
+  // Starting from index = 1, add the value of index to the result counter, and
+  // increment the index by one, repeating the last couple steps until the
+  // index tries to exceed the desired number parameter
+  for (let i = 1; i <= number; i++) {
+    summationResult += i;
+  }
+  // Return the result
+  return summationResult;
 }
+// Test if the function returns the value shown in the instruction's example
+console.log("Result of summation(4); (expected: 10) =>", summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -109,7 +127,7 @@ const zooAnimals = [
   The zoos want to display both the scientific name and the animal name in front of the habitats. 
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
-  */
+*/
 
 function animalNames(/*Your Code Here*/) {
   /*Your Code Here*/
