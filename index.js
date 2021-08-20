@@ -25,7 +25,7 @@ its own scope, and if it cannot find that variable, it will go one level out,
 and look there for it, repeating this process until it either finds it, or ends
 up hitting the global level without finding it, where in strict mode, it will
 return an error, whereas without strict mode, it will create a new global 'var'
-to fill in for the role (which can create buggy code). The idea that on top of
+to fill in for the role (which can create buggy code). The idea that, on top of
 this, nested functions have access to the variables of their parents, even
 after parent functions close, is called closure.
 
