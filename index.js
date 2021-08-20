@@ -39,7 +39,7 @@ after parent functions close, is called closure.
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you 
 may use a for loop for this function if you wish */
 
-console.log("===============[TOPIC 1, TASK 2]===============");
+console.log("===============[CLOSURES, TASK 2]===============");
 
 function summation(number) {
   // Create a result counter
@@ -124,7 +124,9 @@ const zooAnimals = [
   },
 ];
 
-console.log("===============[TOPIC 2, REQUEST 1]===============");
+console.log(
+  "===============[ADVANCED ARRAY METHODS, REQUEST 1]==============="
+);
 
 /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
 The zoos want to display both the scientific name and the animal name in front 
@@ -149,7 +151,9 @@ function animalNames(animalsArray) {
 // Log the display names to the console to view them
 console.log("List of zoo animal display names:", animalNames(zooAnimals));
 
-console.log("===============[TOPIC 2, REQUEST 2]===============");
+console.log(
+  "===============[ADVANCED ARRAY METHODS, REQUEST 2]==============="
+);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. Using
@@ -167,7 +171,9 @@ function lowerCaseNames(animalsArray) {
 // Check if the lowerCaseNames() function works
 console.log("List of lowercase animal names", lowerCaseNames(zooAnimals));
 
-console.log("===============[TOPIC 2, REQUEST 3]===============");
+console.log(
+  "===============[ADVANCED ARRAY METHODS, REQUEST 3]==============="
+);
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
 The zoo is concerned about animals with a lower population count. Using 
@@ -190,7 +196,9 @@ console.log(
   lowPopulationAnimals(zooAnimals)
 );
 
-console.log("===============[TOPIC 2, REQUEST 4]===============");
+console.log(
+  "===============[ADVANCED ARRAY METHODS, REQUEST 4]==============="
+);
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
 The zoo needs to know their total animal population across the United States. 
@@ -346,7 +354,7 @@ class CuboidMakerTwo {
 // Create a second cuboid using the CuboidMakerTwo class
 const cuboidTwo = new CuboidMakerTwo({ length: 4, width: 5, height: 5 });
 
-//🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
+//🦄🦄🦄 Test your volume and surfaceArea methods by un-commenting the logs below: 🦄🦄🦄
 console.log("Cuboid Two volume (expected: 100) =>", cuboidTwo.volume()); // 100
 console.log(
   "Cuboid Two surface area (expected: 130) =>",
