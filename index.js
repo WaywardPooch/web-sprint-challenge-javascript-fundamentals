@@ -152,7 +152,7 @@ console.log("List of zoo animal display names:", animalNames(zooAnimals));
 console.log("===============[TOPIC 2, REQUEST 2]===============");
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
-The zoo needs a list of all their animal's names converted to lower case. Using 
+The zoo needs a list of all their animal's names converted to lower case. Using
 lowerCaseNames use .map() to create a new array of strings with the animal's 
 names in lowercase and return the new array.
 For example: ['jackal, asiatic', .....] */
@@ -202,24 +202,29 @@ the count. */
 function USApop(animalsArray) {
   // Reduce the animals array to a single value of totalPopulation...
   return animalsArray.reduce((totalPopulation, animal) => {
-    // ...by adding each animal's population to the totalPopulation counter
+    // ...by adding each animal's population to the totalPopulation counter...
     return (totalPopulation += animal.population);
+    // ...and start the counting at 0.
   }, 0);
 }
 // Check if USApop() returns the total number of animals
 console.log("Total population of animals in zoos array:", USApop(zooAnimals));
 
-// 🦁🦁🦁 Callbacks 🦁🦁🦁
-/* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
- * Use the higher-order function consume with 3 parameters: a, b and cb
- * The first two parameters can take any argument (we can pass any value as an argument)
- * The last parameter accepts a callback
- * The consume function should return the invocation of cb, passing a and b into cb as arguments
- */
+console.log("===============[TOPIC 3, STEP 1]===============");
 
-function consume(/*Your Code Here */) {
-  /*Your Code Here */
+/* 🦁🦁🦁 Topic 3: Callbacks 🦁🦁🦁
+
+🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
+* Use the higher-order function consume with 3 parameters: a, b and cb
+* The first two parameters can take any argument (we can pass any value as an argument)
+* The last parameter accepts a callback
+* The consume function should return the invocation of cb, passing a and b into cb as arguments */
+
+function consume(argumentA, argumentB, callback) {
+  return callback(argumentA, argumentB);
 }
+// Test if the consume() function works
+consume("Hello,", "world!", console.log);
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
