@@ -1,7 +1,8 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal. */
+Study the code below and explain in your own words why nested function can 
+access the variable internal. */
 
 const external = "I'm outside the function";
 
@@ -57,8 +58,10 @@ function summation(number) {
 // Test if the function returns the value shown in the instruction's example
 console.log("Result of summation(4); (expected: 10) =>", summation(4));
 
-// 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
-// Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
+/* 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
+Given this zoo data from around the United States, follow the instructions 
+below. Use the specific array methods in the requests below to solve the 
+problems. */
 
 const zooAnimals = [
   {
@@ -124,20 +127,35 @@ const zooAnimals = [
 ];
 
 /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
-  The zoos want to display both the scientific name and the animal name in front of the habitats. 
-  Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
-  displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
-*/
+The zoos want to display both the scientific name and the animal name in front 
+of the habitats. Use animalNames to populate and return the displayNames array 
+with only the animal name and scientific name of each animal. displayNames 
+will be an array of strings, and each string should follow this pattern: 
+"name: {name}, scientific: {scientific name}" */
 
-function animalNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+console.log("===============[TOPIC 2, REQUEST 1]===============");
+
+function animalNames(animalsArray) {
+  // Initialize an empty array to store the display names
+  const displayNames = [];
+  // For each animal in the animals array...
+  animalsArray.forEach((animal) => {
+    // ...push their common and scientific names into the displayNames array
+    displayNames.push(
+      `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`
+    );
+  });
+  // Return the list of display names
+  return displayNames;
 }
+// Log the display names to the console to view them
+console.log("List of zoo animal display names:", animalNames(zooAnimals));
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
-  The zoo needs a list of all their animal's names converted to lower case. 
-  Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
-  For example: ['jackal, asiatic', .....]
-  */
+The zoo needs a list of all their animal's names converted to lower case. Using 
+lowerCaseNames use .map() to create a new array of strings with the animal's 
+names in lowercase and return the new array.
+For example: ['jackal, asiatic', .....] */
 
 function lowerCaseNames(/*Your Code Here*/) {
   /*Your Code Here*/
