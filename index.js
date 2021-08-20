@@ -128,6 +128,8 @@ const zooAnimals = [
   },
 ];
 
+console.log("===============[TOPIC 2, REQUEST 1]===============");
+
 /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
 
 The zoos want to display both the scientific name and the animal name in front 
@@ -135,8 +137,6 @@ of the habitats. Use animalNames to populate and return the displayNames array
 with only the animal name and scientific name of each animal. displayNames 
 will be an array of strings, and each string should follow this pattern: 
 "name: {name}, scientific: {scientific name}" */
-
-console.log("===============[TOPIC 2, REQUEST 1]===============");
 
 function animalNames(animalsArray) {
   // Initialize an empty array to store the display names
@@ -154,6 +154,8 @@ function animalNames(animalsArray) {
 // Log the display names to the console to view them
 console.log("List of zoo animal display names:", animalNames(zooAnimals));
 
+console.log("===============[TOPIC 2, REQUEST 2]===============");
+
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 
 The zoo needs a list of all their animal's names converted to lower case. Using 
@@ -161,10 +163,8 @@ lowerCaseNames use .map() to create a new array of strings with the animal's
 names in lowercase and return the new array.
 For example: ['jackal, asiatic', .....] */
 
-console.log("===============[TOPIC 2, REQUEST 2]===============");
-
 function lowerCaseNames(animalsArray) {
-  // Return a new array of animals from the animalsArray...
+  // Return a new array of animals from the animals array...
   return animalsArray.map((animal) => {
     // ...and keep only animal names, converted to lowercase
     return animal.animal_name.toLowerCase();
@@ -173,14 +173,29 @@ function lowerCaseNames(animalsArray) {
 // Check if the lowerCaseNames() function works
 console.log("List of lowercase animal names", lowerCaseNames(zooAnimals));
 
-/* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
-  The zoo is concerned about animals with a lower population count. 
-  Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
-  */
+console.log("===============[TOPIC 2, REQUEST 3]===============");
 
-function lowPopulationAnimals(/*Your Code Here*/) {
-  /*Your Code Here*/
+/* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
+
+The zoo is concerned about animals with a lower population count. Using 
+lowPopulationAnimals, use .filter() to create a new array of objects which 
+contains only the animals with a population of less than 5. */
+
+function lowPopulationAnimals(animalsArray) {
+  // Return a filtered array of animals from the animals array...
+  return animalsArray.filter((animal) => {
+    // ...and only keep animals with a population lower than 5...
+    if (animal.population < 5) {
+      // ...returning these animals as objects.
+      return animal;
+    }
+  });
 }
+// Test if lowPopulationAnimals() returns a list of low-pop animals
+console.log(
+  "Animals with a population of less than 5:",
+  lowPopulationAnimals(zooAnimals)
+);
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
