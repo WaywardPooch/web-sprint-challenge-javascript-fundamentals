@@ -210,9 +210,9 @@ function USApop(animalsArray) {
 // Check if USApop() returns the total number of animals
 console.log("Total population of animals in zoos array:", USApop(zooAnimals));
 
-console.log("===============[TOPIC 3, STEP 1]===============");
+console.log("===============[CALLBACKS, STEP 1]===============");
 
-/* 🦁🦁🦁 Topic 3: Callbacks 🦁🦁🦁
+/* 🦁🦁🦁 Callbacks 🦁🦁🦁
 
 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
 * Use the higher-order function consume with 3 parameters: a, b and cb
@@ -226,7 +226,7 @@ function consume(argumentA, argumentB, callback) {
 // Test if the consume() function works
 consume("Consume function test =>", "Hello, world!", console.log);
 
-console.log("===============[TOPIC 3, STEP 2]===============");
+console.log("===============[CALLBACKS, STEP 2]===============");
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
@@ -253,11 +253,13 @@ function greeting(firstName, lastName) {
 // Test the greeting function
 console.log(greeting("Bilbo", "Baggins"));
 
+console.log("===============[CALLBACKS, STEP 3]===============");
+
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
