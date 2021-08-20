@@ -18,7 +18,7 @@ function myFunction() {
 myFunction();
 
 /*🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-Nested function have access to the lexical scope of all their parent functions;
+Nested functions have access to the lexical scope of their parent functions;
 in other words, variables of parent functions can be passed down into their
 children. If a nested function requires a variable, it will first look within
 its own scope, and if it cannot find that variable, it will go one level out,
