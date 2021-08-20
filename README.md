@@ -30,11 +30,11 @@ Edit this document to include your answers after each question. Make sure to lea
 
    - `.map`, `.reduce`, and `.filter` are all higher order functions used for getting specific information out of arrays.
 
-   - `.filter` is used when you want to "filter" out specific results, which match a desired criteria, from an array, returning a new filtered array with the information that was picked out.
+   - `.filter` is used when you want to "filter" out specific items (in their entirety), which match a desired criteria, from an array, returning a new filtered array with the items that were picked out.
 
-   - `.map` likewise returns an array as `.filter` does, but the difference between them is `.map` is used for transforming the filtered information from the array it's looking at to something else (for example, if applied to an array of 'people' objects, you could take the names of each person and where they're from, provided there are keys for each, to return a new array of greeting strings, which use each person's name and location of where they're from, to create dynamic sentences).
+   - `.map` likewise returns an array as `.filter` does, but the difference between them is `.map` is used for transforming the filtered information from the array it's looking at to something else (for example, if applied to an array of 'people' objects, you could take the names of each person and where they're from, provided there are keys for each, to return a new array of greeting strings, which use each person's name and location of where they're from to create relevant sentences).
 
-   - Unlike the other two, `.reduce` does not return an array, instead returning a single value, and is used mainly for performing calculations from elements in an array.
+   - Unlike the other two, `.reduce` does not return an array, instead returning a single value, and is used mainly for performing calculations from the elements, or values inside the elements, of an array.
 
 2. Explain the difference between a callback and a higher order function.
 
