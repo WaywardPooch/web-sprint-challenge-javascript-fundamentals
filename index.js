@@ -316,13 +316,42 @@ console.log("Cuboid Object =>", cuboid);
 console.log("Cuboid volume (expected: 100) =>", cuboid.volume()); // 100
 console.log("Cuboid surface area (expected: 130) =>", cuboid.surfaceArea()); // 130
 
-// 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
-//🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo {}
+console.log("===============[CLASSES]===============");
+
+/* 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄
+
+🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please 
+rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄 */
+
+class CuboidMakerTwo {
+  // Create the object constructor function
+  constructor(attributes) {
+    this.length = attributes.length;
+    this.width = attributes.width;
+    this.height = attributes.height;
+  }
+  // Attach methods to the constructor's prototype
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  surfaceArea() {
+    return (
+      2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height)
+    );
+  }
+}
+// Create a second cuboid using the CuboidMakerTwo class
+const cuboidTwo = new CuboidMakerTwo({ length: 4, width: 5, height: 5 });
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log("Cuboid Two volume (expected: 100) =>", cuboidTwo.volume()); // 100
+console.log(
+  "Cuboid Two surface area (expected: 130) =>",
+  cuboidTwo.surfaceArea()
+); // 130
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {
