@@ -224,26 +224,34 @@ function consume(argumentA, argumentB, callback) {
   return callback(argumentA, argumentB);
 }
 // Test if the consume() function works
-consume("Hello,", "world!", console.log);
+consume("Consume function test =>", "Hello, world!", console.log);
+
+console.log("===============[TOPIC 3, STEP 2]===============");
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(/*Your Code Here */) {
-  /*Your Code Here*/
+function add(number1, number2) {
+  return number1 + number2;
 }
+// Test the addition of six and four
+console.log("Add function test: 6 + 4 =", add(6, 4));
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(/*Your Code Here */) {
-  /*Your Code Here */
+function multiply(number1, number2) {
+  return number1 * number2;
 }
+// Test the multiplication of six and four
+console.log("Multiply function test: 6 * 4 =", multiply(6, 4));
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
-function greeting(/*Your Code Here */) {
-  return; /*Your Code Here */
+function greeting(firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
+// Test the greeting function
+console.log(greeting("Bilbo", "Baggins"));
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
