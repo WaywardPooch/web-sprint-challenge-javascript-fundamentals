@@ -261,7 +261,7 @@ console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
 console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
-console.log("===============[TOPIC 3, STEP 1]===============");
+console.log("===============[PROTOTYPES]===============");
 
 /* 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴
 
@@ -304,13 +304,17 @@ CuboidMaker.prototype.surfaceArea = function () {
 };
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
-  Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
-  Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
+Create an object called cuboid that uses the new keyword to use our CuboidMaker 
+constructor. Add properties and values of length: 4, width: 5, and height: 5 to 
+cuboid. */
+
+const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+console.log("Cuboid Object =>", cuboid);
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log("Cuboid volume (expected: 100) =>", cuboid.volume()); // 100
+console.log("Cuboid surface area (expected: 130) =>", cuboid.surfaceArea()); // 130
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
